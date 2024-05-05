@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "Socialfi2_backend": {
+      "build": "python -m kybra Socialfi2_backend src/Socialfi2_backend/src/main.py src/Socialfi2_backend/Socialfi2_backend.did",
+      "candid": "src/Socialfi2_backend/Socialfi2_backend.did",
+      "gzip": true,
+      "post_install": ".kybra/Socialfi2_backend/post_install.sh",
+      "type": "custom",
+      "wasm": ".kybra/Socialfi2_backend/Socialfi2_backend.wasm"
+    },
+    "Socialfi2_frontend": {
+      "dependencies": [
+        "Socialfi2_backend"
+      ],
+      "source": [
+        "src/Socialfi2_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "Socialfi2_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
