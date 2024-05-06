@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "Socialfi_backend": {
+      "main": "src/Socialfi_backend/main.mo",
+      "type": "motoko"
+    },
+    "Socialfi_frontend": {
+      "dependencies": [
+        "Socialfi_backend"
+      ],
+      "source": [
+        "src/Socialfi_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "Socialfi_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
